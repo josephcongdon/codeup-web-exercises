@@ -8,7 +8,14 @@
  * Example
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
-
+// let myName = "Joseph"
+//     function sayHello(){
+//         return "hello " + myName
+// }
+//
+// let helloMessage = sayHello();
+//
+// console.log(helloMessage)
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -46,6 +53,13 @@ var random = Math.floor((Math.random() * 3) + 1);
  * number)
  */
 
+
+// function isTwo(num){
+//     return num === 2;
+// }
+// let result = isTwo(random);
+// console.log(random);
+// console.log(result);
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -58,6 +72,16 @@ var random = Math.floor((Math.random() * 3) + 1);
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
+// let bill = prompt("How much is your bill?");
+// let percent = prompt("how much do you want to tip?");
+//
+//  function  calculateTip(){
+//     let amountToTip = bill * percent;
+//     return amountToTip.toFixed(2)
+// }
+// let tipTotal = calculateTip();
+//
+// alert("your tip will be " + tipTotal);
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
@@ -79,3 +103,9 @@ var random = Math.floor((Math.random() * 3) + 1);
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+// function applyDiscount(price, discount){
+// return price - price * discount;
+// }
+// applyDiscount();
+
