@@ -109,3 +109,16 @@ var random = Math.floor((Math.random() * 3) + 1);
 // }
 // applyDiscount();
 
+function multiple2(input1){
+    return input1 * 2
+}
+let sourceOne = multiple2();
+
+function multiple4(input2){
+    return input2 * 4
+}
+let sourceTwo =  multiple4();
+function doublePair(input1,input2){
+    // return sourceOne && sourceTwo
+}
+doublePair();
