@@ -128,7 +128,7 @@
      */
 
 function numberPlusHundred(userNumber){
-    alert( userNumber + 'plus 100 is ' + (userNumber + 100) )
+    alert( userNumber + ' plus 100 is ' + (userNumber + 100) )
     }
 function isOddOrEven(userNumber){
     if (userNumber % 2 !== 0) {
@@ -153,33 +153,14 @@ function isANumber() {
         if (isNaN(userNumber)) {
             alert('this is not a number')
         } else {
-            return isOddOrEven()
-            return isPositive()
-            return numberPlusHundred()
+                isOddOrEven(userNumber);
+                isPositive(userNumber);
+                numberPlusHundred(userNumber);
         }
     }
 }
 
 isANumber()
-    // if (confirm("would you like to enter a number?")) {
-    //     let userNumber = parseFloat(prompt("enter a number here."))
-        // if (isNaN(userNumber)) {
-        //     alert('this is not a number');
-        // } else {
-        //     alert("100 plus " + userNumber + " equals " +              (userNumber + 100))
-        //     if (userNumber % 2 !== 0) {
-        //          alert(userNumber + " Is odd");
-        //     } else if (userNumber % 2 === 0) {
-        //          alert(userNumber + " is even");
-        //     }
-        //     if (userNumber > 0) {
-        //         return alert(userNumber + " Is a positive number");
-        //     } else if (userNumber < 0) {
-        //         return alert(userNumber + " is a negative number");
 
-        //     }
-    //     }
-    //
-    // }
 
 })();
