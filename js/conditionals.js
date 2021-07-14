@@ -127,40 +127,49 @@
      * HINT: The way we prompt for a value could be improved
      */
 
-function numberPlusHundred(userNumber){
-    alert( userNumber + ' plus 100 is ' + (userNumber + 100) )
-    }
-function isOddOrEven(userNumber){
-    if (userNumber % 2 !== 0) {
-        alert(userNumber + " Is odd");
-    } else if (userNumber % 2 === 0) {
-        alert(userNumber + " is even");
-    }
-}
+// function numberPlusHundred(userNumber){
+//     alert( userNumber + ' plus 100 is ' + (userNumber + 100) )
+//     }
+// function isOddOrEven(userNumber){
+//     if (userNumber % 2 !== 0) {
+//         alert(userNumber + " Is odd");
+//     } else if (userNumber % 2 === 0) {
+//         alert(userNumber + " is even");
+//     }
+// }
+//
+// function isPositive(userNumber){
+//     if (userNumber > 0) {
+//          alert(userNumber + " Is a positive number");
+//     } else if (userNumber < 0)  {
+//         return alert(userNumber + " is a negative number");
+//     }
+// }
+//
+// function isANumber() {
+//     if (confirm("would you like to enter a number?")) {
+//         let userNumber = parseFloat(prompt("enter a number here."))
+//
+//         if (isNaN(userNumber)) {
+//             alert('this is not a number')
+//         } else {
+//                 isOddOrEven(userNumber);
+//                 isPositive(userNumber);
+//                 numberPlusHundred(userNumber);
+//         }
+//     }
+// }
+//
+// isANumber()
 
-function isPositive(userNumber){
-    if (userNumber > 0) {
-         alert(userNumber + " Is a positive number");
-    } else if (userNumber < 0)  {
-        return alert(userNumber + " is a negative number");
+    function processNumber(input){
+        return(input %  2 === 0 ? " this is Even" : "this is Odd" )
     }
-}
-
-function isANumber() {
-    if (confirm("would you like to enter a number?")) {
-        let userNumber = parseFloat(prompt("enter a number here."))
-
-        if (isNaN(userNumber)) {
-            alert('this is not a number')
-        } else {
-                isOddOrEven(userNumber);
-                isPositive(userNumber);
-                numberPlusHundred(userNumber);
+    function isANumber() {
+        if (confirm("would you like to enter a number?")) {
+            let givenInput = parseFloat(prompt("enter a number here."))
+            return (isNaN(givenInput) ? "this is not a number" :  processNumber)
         }
     }
-}
-
-isANumber()
-
-
+        isANumber()
 })();
