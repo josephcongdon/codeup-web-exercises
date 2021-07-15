@@ -12,14 +12,19 @@
 // function numberGenerator(){
 //
 //     for(i=1; i<=10; i++){
-//         let randomNumber = Math.floor(180 * Math.random()) + 20
+//         let randomNumber = Math.floor(Math.random()*180) + 20
 //         if(randomNumber % 2 !== 0){
 //             console.log ("this number " + randomNumber + " is odd")
-//         }else if(i % 2 === 0){
+//         }else if(randomNumber % 2 === 0){
 //              console.log("this number " + randomNumber + " is even")
-//         }if(i === 200){
-//             return "done"
 //         }
-//     }
+//         }
 // }
 // numberGenerator()
+
+// function nineSpaces(){
+//     for(x=1; x<=9; x++){
+//         console.log(x)
+//     }
+// }
+// nineSpaces()
