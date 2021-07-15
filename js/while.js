@@ -16,7 +16,8 @@ do {let conesBought = Math.floor(Math.random() * 5) + 1;
     } else {
         console.log(" I have sold " + conesBought + " cones");
         amountCones = amountCones - conesBought;
-        console.log(amountCones + " cones left")
+        console.log(amountCones + " cones left to sell")
     }
 } while (amountCones > 0);
 }
+snowCones()
