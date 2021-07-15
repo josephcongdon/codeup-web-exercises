@@ -22,9 +22,10 @@
 // }
 // numberGenerator()
 
-// function nineSpaces(){
-//     for(x=1; x<=9; x++){
-//         console.log(x)
-//     }
-// }
-// nineSpaces()
+function nineSpaces(){
+    for(x=1; x<=9; x++){
+        console.log(x.toString().repeat(x))
+    }
+
+}
+nineSpaces()
