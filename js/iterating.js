@@ -46,14 +46,14 @@
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 
-        function firstItem(x){
+    function firstItem(x){
     return x[0];
     }
     function secondItem(x){
-        return x[1];
+    return x[1];
     }
     function lastItem(x){
-     return x[x.length -1];
+    return x[x.length -1];
     }
 
 
