@@ -46,14 +46,18 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
-    // shoppers.forEach((shopper)=>{
-    //     console.log(shopper.name + " spent $" + shopper.amount+ " at HEB!")
-    // })
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+    shoppers.forEach((shopper)=>{
+        if(shopper.amount <= 200) console.log(shopper.name + " only spent $" + shopper.amount);
+        else{
+            console.log(shopper.name + " spent " + shopper.amount + " with a 12% discount their bill is $" + ( shopper.amount -shopper.amount * .12))
+        }
+        console.log(shopper.name + " spent $" + shopper.amount+ " at HEB!")
+    })
     /** TODO:
      * Create an array of objects that represent books and store it in a
      * variable named `books`. Each object should have a title and an author
@@ -69,33 +73,40 @@
     const books = [
         {
             title: "The Salmon of Doubt",
-            firstName: 'Douglas' ,
-            lastName:'Adams'
+            author:{
+                firstName: 'Douglas' ,
+                lastName:'Adams'
+            }
         },
         {
             title: "The Catcher in the Rye Bread",
-            firstName: 'Kevin',
-            lastName: 'Durant'
+            author:{
+                firstName: 'Kevin',
+                lastName: 'Durant'}
         },
         {
             title: "Your food destroyed my colon",
-            firstName: 'Homer',
-            lastName: 'Simpson'
+            author:{
+                firstName: 'Homer',
+                lastName: 'Simpson'
+            }
         },
         {
-            title: "The Beatles are better than you",
-            firstName: 'John-Paul',
-            lastName: 'George-Ringo'
+            title: "The Beatles Are Better Than You",
+            author:{
+                firstName: 'John-Paul',
+                lastName: 'George-Ringo'}
         },
         {
             title: "The force is a MLM",
-            firstName: 'Luke',
-            lastName: 'SkyWalker'
+            author:{
+                firstName: 'Luke',
+                lastName: 'SkyWalker'}
         }
     ];
 
     books.forEach((book,index)=>{
-        console.log( "Book " + (index + 1) + " " + book.title + ' was written by ' + book.firstName + " " + book.lastName)
+        console.log( "Book " + (index + 1) + " " + book.title + ' was written by ' + book.author.firstName + " " + book.author.lastName)
     })
     /**
      * TODO:
@@ -132,5 +143,12 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+    // function createBook(title, firstName, lastName){
+    //        this.title = title;
+    //        this.firstName = firstName;
+    //        this.lastName = lastName;
+    // }
+
+
 
 })();
