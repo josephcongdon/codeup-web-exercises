@@ -70,7 +70,7 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
-    const books = [
+    let books = [
         {
             title: "The Salmon of Doubt",
             author:{
@@ -143,12 +143,20 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
-    // function createBook(title, firstName, lastName){
-    //        this.title = title;
-    //        this.firstName = firstName;
-    //        this.lastName = lastName;
-    // }
+    function createBook(title, firstName, lastName){
+           this.title = title;
+           this.firstName = firstName;
+           this.lastName = lastName;
+    }
 
+    let newBook = new createBook("The ScrewTape Letters", "Clive Staples", "Lewis")
 
+    console.log(newBook)
+
+    function showBookInfo (books){
+        return books.title + ' ' + books.author.firstName + ' ' + books.author.lastName
+    }
+
+    console.log(showBookInfo(books[0]))
 
 })();
