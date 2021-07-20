@@ -11,7 +11,13 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
-
+    let person ={
+        firstName: "Joseph",
+        lastName: "Congdon"
+    };
+    console.log(person)
+    console.log(person.firstName)
+    console.log(person.lastName)
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -21,7 +27,11 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
+    person.sayHello = ()=>{
+       return "Hello from " + person.firstName +" "+ person.lastName;
+    }
 
+    console.log(person.sayHello())
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
      * more than $200. If a shopper spends more than $200, they get a 12%
@@ -41,7 +51,9 @@
     //     {name: 'Ryan', amount: 250},
     //     {name: 'George', amount: 320}
     // ];
-
+    // shoppers.forEach((shopper)=>{
+    //     console.log(shopper.name + " spent $" + shopper.amount+ " at HEB!")
+    // })
     /** TODO:
      * Create an array of objects that represent books and store it in a
      * variable named `books`. Each object should have a title and an author
@@ -54,7 +66,37 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+    const books = [
+        {
+            title: "The Salmon of Doubt",
+            firstName: 'Douglas' ,
+            lastName:'Adams'
+        },
+        {
+            title: "The Catcher in the Rye Bread",
+            firstName: 'Kevin',
+            lastName: 'Durant'
+        },
+        {
+            title: "Your food destroyed my colon",
+            firstName: 'Homer',
+            lastName: 'Simpson'
+        },
+        {
+            title: "The Beatles are better than you",
+            firstName: 'John-Paul',
+            lastName: 'George-Ringo'
+        },
+        {
+            title: "The force is a MLM",
+            firstName: 'Luke',
+            lastName: 'SkyWalker'
+        }
+    ];
 
+    books.forEach((book,index)=>{
+        console.log( "Book " + (index + 1) + " " + book.title + ' was written by ' + book.firstName + " " + book.lastName)
+    })
     /**
      * TODO:
      * Loop through the books array and output the following information about
