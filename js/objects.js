@@ -52,7 +52,7 @@
         {name: 'George', amount: 320}
     ];
     shoppers.forEach((shopper)=>{
-        if(shopper.amount <= 200) console.log(shopper.name + " only spent $" + shopper.amount);
+        if(shopper.amount <= 200) console.log(shopper.name + " only spent $" + shopper.amount + " and gets no discount");
         else{
             console.log(shopper.name + " spent " + shopper.amount + " with a 12% discount their bill is $" + ( shopper.amount -shopper.amount * .12))
         }
