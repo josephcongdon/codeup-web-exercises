@@ -1,0 +1,40 @@
+body{
+
+
+    background-color: midnightblue;
+    color: white;
+}
+
+
+
+.parent{
+    height: 36rem;
+    width:  113rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.child{
+    width: 400px;
+    height: 400px;
+}
+
+.user-comment{
+    padding-top: .2rem;
+}
+
+.second-child{
+    margin: 25px 0 25px 0;
+
+}
+
+.radio {
+padding-bottom: 9px;
+}
+
+.form-spacer{
+margin-top: 1rem;
+}
+.button-space{
+    margin: 9px;
+}

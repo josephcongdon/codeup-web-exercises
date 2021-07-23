@@ -2,9 +2,74 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="public/formstyle.css" rel="stylesheet"/>
     <title>Forms</title>
+
 </head>
 <body>
+<div class="parent">
+  <div class="child">
+<h1>Fill in the form please</h1>
+<form method="post" action="https://request-inspector.glitch.me/">
+  <div class="mb-3">
+    <label  class="form-label">Email address</label>
+    <input type="email" placeholder="insert email here" class="form-control" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">What City are your From?</label>
+    <input type="input" class="form-control"  placeholder="insert city name here" >
+  </div>
+
+  <br>
+  <div class="user-comment">
+    <h4>Bio</h4>
+    <div class="form-floating">
+      <textarea class="form-control" placeholder="Leave a comment here" style="height: 100px"></textarea>
+    </div>
+  </div>
+  <br>
+  <h4 class="second-child">How did you hear about us?</h4>
+  <div class="form-check radio">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+    <label class="form-check-label" for="flexRadioDefault1">
+      billboard
+    </label>
+  </div>
+  <div class="form-check radio">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+    <label class="form-check-label" for="flexRadioDefault2">
+      radio advertisement
+    </label>
+  </div>
+  <div class="form-check radio">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+    <label class="form-check-label" for="flexRadioDefault3">
+      internet advertisement
+    </label>
+  </div>
+  <div class="form-check radio">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
+    <label class="form-check-label" for="flexRadioDefault4">
+      other
+    </label>
+  </div>
+  <div class="form-spacer">
+    <label for="web-browser">What browser are you using?</label>
+    <select name="web-browser" id="web-browser">
+      <option value="Chrome">Chrome</option>
+      <option value="Fire Fox">Fire Fox</option>
+      <option value="Safari">Safari</option>
+      <option value="Netscape">Netscape</option>
+    </select>
+  </div>
+  <div class="form-spacer">
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="reset" class="btn btn-outline-primary button-space">Reset</button>
+  </div>
+</form>
+  </div>
+</div>
 
 </body>
 </html>
