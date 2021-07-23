@@ -64,12 +64,18 @@ li a:hover {
 
 .developers{
     text-align: center;
+    position: relative;
 }
 
 .profile-pic{
-    height: 100px;
+    height: auto;
     width: 100px;
     border-radius: 50%;
     margin: 30px;
     position: relative;
+}
+
+.space-table{
+    margin: 10px !important;
+
 }
