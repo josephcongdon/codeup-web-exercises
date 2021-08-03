@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/order-pizza.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <title>order-pizza</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Pizza World</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Order online <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+<!--            <li class="nav-item dropdown">-->
+<!--                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--                    Dropdown-->
+<!--                </a>-->
+<!--                <div class="dropdown-menu" aria-labelledby="navbarDropdown">-->
+<!--                    <a class="dropdown-item" href="#">Action</a>-->
+<!--                    <a class="dropdown-item" href="#">Another action</a>-->
+<!--                    <div class="dropdown-divider"></div>-->
+<!--                    <a class="dropdown-item" href="#">Something else here</a>-->
+<!--                </div>-->
+<!--            </li>-->
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Zip Code" aria-label="Search">
+                <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search Stores near You!</button>
+            </form>
+        </ul>
+        <div class="nav-item">
+                <button class ="btn secondary">
+                <img class="icon-su" src="images/user-solid.svg"> Sign up
+                </button>
+        </div>
+    </div>
+</nav>
+
+<div class="jumbotron jumbotron-fluid">
+    <h1 class="display-4">Welcome to Pizza World!</h1>
+<!--    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>-->
+<!--    <hr class="my-4">-->
+<!--    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>-->
+<!--    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>-->
+</div>
+
+
+
+
+
+<h2>Build your own Pizza</h2>
+
+<!--//beggining of our tabs-->
+
+
+
+<ul class="nav nav-tabs"id="myTab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link" id="sizeandcrust-tab" data-toggle="tab" href="#sizeandcrust" role="tab" aria-controls="sizeandcrust" aria-selected="true"><span class="badge badge-pill badge-info">1 </span>Size and Crust</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="cheeseandsauce-tab" data-toggle="tab" href="#cheeseandsauce" role="tab" aria-controls="cheeseandsauce" aria-selected="false"><span class="badge badge-pill bg-secondary text-light">2 </span>Cheese and Sauce</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="toppings-tab" data-toggle="tab" href="#toppings" role="tab" aria-controls="toppings" aria-selected="false"><span class="badge badge-pill  bg-secondary text-light">3 </span>Toppings </a>
+    </li>
+</ul>
+
+<div class="tab-content" id="myTabContent">
+
+    <div class="tab-pane fade show active" id="sizeandcrust" role="tabpanel" aria-labelledby="size-and-crust-tab">
+
+        <div class="card">
+                <div class="card-header text-white bg-primary">
+                    Choose size and crust
+                </div>
+            <div class="card card-custom" style="width: 100%;">
+                <div class="card-header">
+                    Hand Tossed
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Garlic seasoned crust ith a rich, buttery taste</li>
+                    <li class="list-group-item"><div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Small(10")
+                        </label>
+                    </div></li>
+                    <li class="list-group-item"><div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                           Medium(12")
+                        </label>
+                    </div></li>
+                </ul>
+        </div>
+        <div class="card card-custom" style="width: 100%;">
+            <div class="card-header">
+                Crispy Thin
+            </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio</li>
+                        <li class="list-group-item">
+                            <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">Medium(12")</label>
+                            </div>
+                        </li>
+                    <li class="list-group-item"><div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">Large(14")</label>
+                    </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+<!--    second tab-->
+
+    <div class="tab-pane fade" id="cheeseandsauce" role="tabpanel" aria-labelledby="cheese-and-sauce-tab"></div>
+    <div class="tab-pane fade" id="toppings" role="tabpanel" aria-labelledby="toppings-tab">...</div>
+</div>
+        <div class="card-footer">
+            <div class="button-detail">
+                <a href="#" class="btn btn-primary">Next Step></a>
+            </div>
+        </div>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</body>
+</html>

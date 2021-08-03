@@ -1,0 +1,39 @@
+body{
+padding: 0 5rem;
+}
+
+.custom-title{
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 1px;
+}
+
+.icon-su{
+    height: auto;
+    width: 13px;
+}
+
+.jumbotron{
+    background-image: url("../images/pizza.png");
+}
+
+h1{
+    background-color: rgba(211, 211, 211, 0.65);
+    text-align: center;
+    width: 100%;
+}
+
+.badge-pill{
+    margin-right:  6px !important;
+}
+
+.card-custom{
+    margin: 10px 0 10px 12px;
+    width: 98% !important;
+}
+
+.button-detail{
+    display: flex;
+    flex-direction: row-reverse;
+}
