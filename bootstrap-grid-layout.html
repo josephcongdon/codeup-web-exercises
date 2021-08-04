@@ -11,14 +11,14 @@
 <body>
 
 <!-- entire page wrapped in a fluid container and single row -->
-<div class="">
-  <div class="">
+<div class="container-fluid boostrap-container">
+  <div class="row">
     <!-- header takes up full row -->
-    <header class="">
+    <header class="col-12">
       <h1 class="text-center display-4 py-5">Bootstrap Grid Intro</h1>
     </header>
     <!-- nav takes up full width for small devices and 2 columns for medium and up devices  -->
-    <nav class="">
+    <nav class="col-sm-fluid col-md-2">
       <!-- list should be a flex container with column layout for medium and up devices -->
       <ul class="nav pl-md-3 pl-lg-5 mb-5 text-nowrap">
         <li class="nav-item">
@@ -42,9 +42,9 @@
         main is both a column class and row, since it will contain nested columns
          - main should fully stretch across the page for small devices, ten columns for medium and 8 columns for large
     -->
-    <main class="">
+    <main class="col-12 col-md-10 col-lg-8 row">
       <!-- each article should take up the full width of small devices, two side-by-side for medium and three across for large -->
-      <article class="">
+      <article class="col-12 col-md-6 col-lg-4">
         <h3>This is a Post</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam iste nemo nulla.
           Consequatur
@@ -60,7 +60,7 @@
           iste
           itaque laudantium</p>
       </article>
-      <article class="">
+      <article class="col-12 col-md-6 col-lg-4">
         <h3>This is a Post</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam iste nemo nulla.
           Consequatur
@@ -73,7 +73,7 @@
           nemo
           nisi nostrum</p>
       </article>
-      <article class="">
+      <article class="col-12 col-md-6 col-lg-4">
         <h3>This is a Post</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam iste nemo nulla.
           Consequatur
@@ -87,11 +87,11 @@
           nisi nostrum perspiciatis .</p>
       </article>
       <!-- the forms should take up the full width of main -->
-      <div class="">
+      <div class="col-12">
         <!-- since multiple forms will be laid out within this div, it should be a row -->
-        <div class="">
+        <div class="row">
           <!-- each form should take up the full width of main for small devices and halve for large devices -->
-          <section class="">
+          <section class="col-12 col-lg-6">
             <div class="card d-flex flex-column p-2">
               <h3 class="my-3 text-center">Sign Up</h3>
               <form action="" class="d-flex flex-column form-group">
@@ -108,7 +108,7 @@
               </form>
             </div>
           </section>
-          <section class="">
+          <section class="col-12 col-lg-6">
             <div class="card d-flex flex-column p-2 h-100">
               <h3 class="my-3 text-center">Sign In</h3>
               <form action="" class="d-flex flex-column form-group h-100">
@@ -126,10 +126,10 @@
       </div>
     </main>
     <!-- the aside should disappear for medium devices and smaller and take up two columns on large devices -->
-    <aside class="d-none d-lg-block "></aside>
+    <aside class="d-none col-lg-2 d-lg-block "></aside>
 
     <!-- the footer should take up the full width for small devices and two thirds of the center for medium and larger devices -->
-    <footer class=" mt-3">
+    <footer class="col-12 offset-lg-2 col-lg-8 mt-3">
       <h3>This is a footer.</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim eum fugit impedit magnam numquam optio
         ratione
