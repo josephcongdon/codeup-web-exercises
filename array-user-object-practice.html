@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>array-user-object-practice.html</title>
+</head>
+<body>
+<script>
+
+    // // Create a function, filterOutBobUsers, that takes in an array of user objects with firstName and lastName properties and returns an array of user objects without any Bob users. The case of the Bob names does not matter.
+
+
+    function filterOutBobUsers(users){
+    let outputUsers = [];
+    users.forEach((user) => {
+    if(user.firstName.toLowerCase() !== 'bob'){
+     outputUsers.push(user);
+    }
+    })
+
+    return outputUsers;
+
+    }
+
+    let users = [
+        {
+            firstName: 'bob',
+            lastName: 'Smith'
+        },
+        {
+            firstName: 'BOB',
+            lastName: 'Smith'
+        },
+        {
+            firstName: 'Fred',
+            lastName: 'Smith'
+        },
+        {
+            firstName: 'Cathy',
+            lastName: 'Smith'
+        },
+        {
+            firstName: 'Dawn',
+            lastName: 'Smith'
+        }
+    ]
+
+    console.log(filterOutBobUsers(users));
+    // filterOutBobUsers(users) // returns...
+    //     [
+    //     {
+    //         firstName: 'Fred',
+    //         lastName: 'Smith'
+    //     },
+    //         {
+    //             firstName: 'Cathy',
+    //             lastName: 'Smith'
+    //         },
+    //         {
+    //             firstName: 'Dawn',
+    //             lastName: 'Smith'
+    //         }
+    //     ]
+
+</script>
+</body>
+</html>

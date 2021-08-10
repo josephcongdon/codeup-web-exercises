@@ -8,6 +8,24 @@
 <body>
 
 <h1 id="main-header">Hello World!</h1>
+
+<table style="width:80%">
+    <tr>
+        <th>
+            <button id="btn-1">Background-Color</button>
+        </th>
+        <th>
+            <button id="btn-2">Sound</button>
+        </th>
+        <th>
+            <button id="btn-3">Text</button>
+        </th>
+        <th>
+            <button id="btn-4">List Items</button>
+        </th>
+    </tr>
+
+</table>
 <ul>
     <li data-dbid="1">Item 1</li>
     <li data-dbid="2">Item 2</li>
@@ -27,30 +45,30 @@
 </p>
 
 <script>
-    (function() {
+    // (function() {
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
-        var mainHeader = document.getElementById('main-header');
+        let mainHeader = document.getElementById('main-header');
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
 
             mainHeader.innerHTML = "JavaScript is Cool"
         // TODO: Uncomment the next line and get the sub header element by id
-        var subHeader = document.getElementById('sub-header');
+        let subHeader = document.getElementById('sub-header');
 
         // TODO: Set the text color of subHeader to blue
         subHeader.style.color = 'blue';
 
         // TODO: Uncomment the next line and get all list items
-        var listItems = document.getElementsByTagName("li");
-        for(var i = 0; i <= listItems.length; i++) {
-            var dbID = listItems[i].getAttribute("data-dbid");
-            if(dbID === '1'){
-                listItems[i].style.color = 'blue'
-            }else if(i % 2 === 0){
-            listItems[i].style.color = 'grey';
-            }
-        }
+        // let listItems = document.getElementsByTagName("li");
+        // // for(let i = 0; i <= listItems.length; i++) {
+        // //     let dbID = listItems[i].getAttribute("data-dbid");
+        // //     if(dbID === '1'){
+        // //         listItems[i].style.color = 'blue'
+        // //     }else if(i % 2 === 0){
+        // //     listItems[i].style.color = 'grey';
+        // //     }
+        // // }
 
 
         // TODO: Set text color on every other list item to grey
@@ -58,11 +76,55 @@
         // TODO: Set text color of li with dbid = 1 to blue
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        let subParagraphs = document.getElementsByClassName("sub-paragraph");
-            subParagraphs[0].innerHTML = "Mission Accomplished!";
+        // let subParagraphs = document.getElementsByClassName("sub-paragraph");
+        //      console.log(subParagraphs);
+        //     subParagraphs[0].innerHTML = "Mission Accomplished!";
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-    })();
+
+    let btnOne = document.getElementById("btn-1")
+    btnOne.addEventListener('click', function(){
+        console.log(btnOne)
+       let currentColor = document.getElementsByTagName('body')[0].style.backgroundColor;
+        if(currentColor === "red") {
+            document.getElementsByTagName('body')[0].style.backgroundColor = 'unset';
+        } else {
+           document.getElementsByTagName('body')[0].style.backgroundColor = 'red';
+        }
+    });
+
+       let btnTwo = document.getElementById('btn-2');
+           btnTwo.addEventListener("click", function(){
+               console.log(btnTwo);
+            let audio = new Audio('audio/Wilhelm-Scream.mp3');
+            audio.play();
+        });
+
+       let btnThree = document.getElementById('btn-3');
+        btnThree.addEventListener("click", function(){
+            console.log(btnThree);
+            let subParagraphs = document.getElementsByClassName("sub-paragraph");
+             console.log(subParagraphs);
+             subParagraphs[0].innerHTML = "Mission Accomplished!"
+        })
+
+    let btnFour = document.getElementById('btn-4');
+    btnFour.addEventListener("click", function(){
+        console.log(btnFour);
+        let listItems = document.getElementsByTagName("li");
+        for(let i = 0; i <= listItems.length; i++) {
+            let dbID = listItems[i].getAttribute("data-dbid");
+            if(dbID === '1'){
+                listItems[i].style.color = 'blue'
+            }else if(i % 2 === 0){
+                listItems[i].style.color = 'grey';
+            }
+        }
+    })
+
+
+
+    // })();
 </script>
 </body>
 </html>
