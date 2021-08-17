@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>National Park FAQ</title>
+
+    <style>
+       .invisible{
+           visibility: hidden;
+       }
+
+       .highlight{
+           background-color: rgba(214, 243, 99, 0.9);
+       }
+    </style>
+</head>
+<body>
+<p>FAQ about National Parks</p>
+
+<dl>
+  <dt>Bear</dt>
+  <dd class=invisible>A very large mammal that eats your kids.</dd>
+
+  <dt>Wolf</dt>
+   <dd class=invisible>A very large mammal that will also eat your kids.</dd>
+
+  <dt>Owl</dt>
+  <dd class="invisible">Not quite a mammal but, It will also have a go at your kids. If it can't finish your offspring the bear will help</dd>
+
+  <dt>Boar</dt>
+  <dd class="invisible">A large mammal like a pig that will trample your kids as a peace offering to the bigger predators.</dd>
+
+  <dt>regret</dt>
+  <dd class="invisible">That feeling you get when you leave your kids alone in the National Park.</dd>
+
+  <dt>Bison</dt>
+  <dd class="invisible">What a WaterBuffalo says to his child going off to school.</dd>
+
+  <dt>Moose</dt>
+  <dd class="invisible">Also also a very large mammal. It was made fun of in high-school for its looks and now is seeking revenge on your kids.</dd>
+
+  <dt>Wolf</dt>
+  <dd class="invisible">wait we already did this one. Well it is very important to watch out for these guys.</dd>
+
+  <dt>Park Ranger</dt>
+  <dd class="invisible">The one who has to go out and find what's left of your kids.</dd>
+
+  <dt>Janitor</dt>
+  <dd class="invisible">The poor fellow who has to go out and clean up what is left of your kids. Fortunately nature did most of the cleaning</dd>
+</dl>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+
+   $("dt").click(()=> {
+   $('dd').toggleClass('invisible');
+   });
+
+
+   $("dt").click(()=> {
+       $('dt').addClass('highlight');
+   });
+
+   $('invisible').each(function(){
+       console.log($(this));
+   });
+
+</script>
+</body>
+</html>

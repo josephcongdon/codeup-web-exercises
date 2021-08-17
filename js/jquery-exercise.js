@@ -1,10 +1,11 @@
-$('h1').html("Draco").css('color','#E8F0F2');
+$("#header").click(function() {
+$(this).css('background-color', '#0fb784')
+});
 
-$('p').html("Is the best cohort!");
+$("#sub-title").click(function() {
+    $(this).css('font-size', '18px')
+});
 
-$('div').css('background-color','#39A2DB')
-        .css('border-radius', '10px');
-$('ul').css('display', 'flex')
-$('li').css('margin', 'auto')
-       .css('padding-bottom', '10px');
-
+$("#unordered").click(function() {
+    $(this).css('color', 'red')
+});
