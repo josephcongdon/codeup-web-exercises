@@ -1,10 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Online Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 </head>
 <body>
+
+<h1>My Tool Store</h1>
+
+<table id="products">
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Categories</th>
+    </tr>
+    </thead>
+    <tbody id="insertProducts"></tbody>
+</table>
+<button id='reset'>reset</button>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script>
+
+    "use strict";
+    // TODO: Create an AJAX GET request for the file under data/inventory.json
+
+    $(document).ready(function () {
+        $.ajax('/data/inventory.json').done(function (data) {
+            data.forEach(function (item) {
+                // console.log(item.title);
+                // console.log(item.categories);
+                // console.log(item.price);
+
+                let categories = item.categories.join(' , ');
+                console.log(categories)
+
+                $("#insertProducts").append(
+                    '<tr>' + '<td>' + item.title + '</td>' +
+                    '<td>' + item.quantity + '</td>' +
+                    '<td>' + item.price + '</td>' +
+                    '<td>' + categories + '</td>' + '</tr>'
+                );
+            });
+
+            function tableDisplay() {
+                $.ajax('/data/inventory.json').done(function (data) {
+                    data.forEach(function (item) {
+                        // console.log(item.title);
+                        // console.log(item.categories);
+                        // console.log(item.price);
+
+                        let categories = item.categories.join(' , ');
+                        console.log(categories)
+
+                        $("#insertProducts").append(
+                            '<tr>' + '<td>' + item.title + '</td>' +
+                            '<td>' + item.quantity + '</td>' +
+                            '<td>' + item.price + '</td>' +
+                            '<td>' + categories + '</td>' + '</tr>'
+                        );
+                    });
+                });
+            }
+                $('#reset').click(function () {
+                    $('#insertProducts').html('');
+                    tableDisplay();
+                });
+            });
+        });
+
+    // TODO: Take the data from inventory.json and append it to the products table
+    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+    //             its contents and fields
+    //       HINT: You will want to target #insertProducts for your new HTML elements
+
+</script>
 
 </body>
 </html>

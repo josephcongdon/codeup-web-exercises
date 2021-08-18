@@ -17,3 +17,14 @@ let afternoonListener = document.getElementById("afternoon");
     $('#reset').click(function(){
        location.reload();
     });
+
+
+
+    $('#displayWord').click(function(){
+        let myWord = $('#wordToDisplay').val();
+        $('#word').html(myWord);
+    });
+
+    $('#create-an-element').click(function() {
+        $(this).after('<p> I am here</p>');
+});
