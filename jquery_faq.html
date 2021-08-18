@@ -21,6 +21,33 @@
            color: blue;
        }
 
+       .picture{
+           border: 3px solid green;
+           border-radius: 8px;
+           display: flex;
+           height: 130px;
+           width: 145px;
+
+       }
+
+       .picture-1{
+           margin: auto;
+
+       }
+
+       .picture-2{
+           margin: auto;
+       }
+
+       .picture-3{
+           margin: auto;
+
+       }
+       section{
+           display: flex;
+
+       }
+
     </style>
 </head>
 <body>
@@ -58,6 +85,25 @@
 <!--  <dd class="invisible">The poor fellow who has to go out and clean up what is left of your kids. Fortunately nature did most of the cleaning</dd>-->
 <!--</dl>-->
 
+<section>
+<div id="1" class="picture picture-1">
+    <img src="images/Frank-snap-out-of-it.jpeg">
+</div>
+    <button class="swap">swap</button>
+
+    <div id="2" class="picture picture-2">
+    <img src="images/vader-gif.gif">
+</div>
+    <button class="swap">swap</button>
+
+    <div id="3" class="picture picture-3">
+    <img src="images/tenor.gif"/>
+</div>
+    <button class="swap">swap</button>
+
+
+
+</section>
 
 <ul>
     <h3>The Park</h3>
@@ -113,6 +159,12 @@
    $('li').click(function(){
        $(this).parent().children().first().next().toggleClass('made-blue');
    });
+
+    $('swap').click(function(){
+        $('div').each(function(){
+
+        })
+    })
 
 </script>
 </body>
