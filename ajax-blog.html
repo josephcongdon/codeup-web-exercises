@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax-blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <style>
+        h6{
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id="posts"></div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function() {
+        $.ajax('/data/blog.json').done(function(data) {
+            data.forEach((blog) => {
+                console.log(blog.title);
+                let categories = blog.categories.join(' ');
+
+                $('#posts').append(
+                    '<h4>' + blog.title +'</h4>' +
+                    '<em>'+ categories +'</em>' + '<h6>' + blog.date +'</h6>' +
+                    '<p>'+ blog.content +'</p>'
+
+                );
+            });
+        });
+    });
+</script>
+</body>
+</html>
