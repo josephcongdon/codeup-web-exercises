@@ -1,0 +1,1 @@
+const MAP_BOX_API_TOKEN = 'pk.eyJ1Ijoiam9zZXBoY29uZ2RvbiIsImEiOiJja3NqMWZpc3cwd2k0MnZuc3RyaHBkYjV1In0.OK12ACA1itl0EYOc3VqSbA';
