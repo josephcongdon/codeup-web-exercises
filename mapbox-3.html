@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mapbox-3</title>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css' rel='stylesheet' />
+    <script src="js/keys.js"></script>
+</head>
+<body>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js'></script>
+
+<h3>enter address</h3>
+<input id="address" type="search" placeholder="type here"/>
+<button id="change-map-btn">click me</button>
+<div id='map' style='width: 400px; height: 300px;'></div>
+
+<script>
+    function geocode(search, token) {
+        var baseUrl = 'https://api.mapbox.com';
+        var endPoint = '/geocoding/v5/mapbox.places/';
+        return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
+            .then(function(res) {
+                return res.json();
+                // to get all the data from the request, comment out the following three lines...
+            }).then(function(data) {
+                return data.features[0].center;
+            });
+    }
+
+
+    mapboxgl.accessToken = MAP_BOX_API_TOKEN;
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        center: [-77.050636, 38.889248], // starting position [lng, lat]
+        zoom: 12 // starting zoom
+    });
+
+    setTimeout(function (){
+        geocode("Whitefish, Montana", MAP_BOX_API_TOKEN).then(function(result){
+            map.setCenter(result);
+            map.setZoom(13);
+            map.setStyle('.mapbox://styles/mapbox/satellite-v9');
+        })
+    },5000);
+
+    geocode("1600 Pennsylvania Ave.", MAPBOX_API_TOKEN).then(function(result) {
+        map.setCenter(result);
+        map.setZoom(13);
+    });
+
+    document.querySelector('#change-map-btn').addEventListener('click', ()=>{
+        let address = document.querySelector()
+    })
+
+    let memorinalPopup = new mapboxgl.Popup().setHTML("<h3>Lincoln Memorial</h3>")
+    let marker = new mapboxgl.Marker({draggable: true}).setLngLat([-77.050636,  38.889248]).setPopup(memorinalPopup).addTo(map);
+
+    marker.on('dragend', function() {
+        let newCoordinates = marker.getLngLat();
+        memorinalPopup.setHTML(newCoordinates.lng);
+    });
+</script>
+
+</body>
+</html>
