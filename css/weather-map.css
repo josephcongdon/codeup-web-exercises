@@ -1,0 +1,17 @@
+body{
+    padding: 15px;
+    background-color: rgb(23, 56, 61);
+}
+
+.map-parent{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.map-body{
+    width: 700px;
+    height: 700px;
+    margin: auto;
+    border-radius: 18%;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mapbox_maps_api</title>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css' rel='stylesheet' />
+    <script src="js/keys.js"></script>
+</head>
+<body>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js'></script>
+
+<h3>enter address</h3>
+<input id="address" type="search" placeholder="type here"/>
+<button id="change-map-btn">click me</button>
+<div style="display: flex; height: 100%; width: 100%;">
+<div id='map' style='width: 700px; height: 700px; margin: auto; border-radius: 20%'></div>
+</div>
+
+<script>
+    function geocode(search, token) {
+        var baseUrl = 'https://api.mapbox.com';
+        var endPoint = '/geocoding/v5/mapbox.places/';
+        return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
+            .then(function(res) {
+                return res.json();
+                // to get all the data from the request, comment out the following three lines...
+            }).then(function(data) {
+                return data.features[0].center;
+            });
+    }
+
+
+    mapboxgl.accessToken = MAP_BOX_API_TOKEN;
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        center: [120.984222, 14.599512], // starting position [lng, lat]
+        zoom: 10 // starting zoom
+    });
+
+
+    /// after
+    setTimeout(function (){
+        geocode("2F South Wing, SM Mall Of Asia, 1300 Seaside Blvd, Pasay, Metro Manila, Philippines", MAP_BOX_API_TOKEN).then(function(result){
+            map.setCenter(result);
+            map.setZoom(12);
+            map.setStyle('.mapbox://styles/mapbox/satellite-v9');
+        })
+    },5000);
+    setTimeout(function (){
+        geocode("2F South Wing, SM Mall Of Asia, 1300 Seaside Blvd, Pasay, Metro Manila, Philippines", MAP_BOX_API_TOKEN).then(function(result){
+            map.setCenter(result);
+            map.setZoom(16);
+            map.setStyle('.mapbox://styles/mapbox/satellite-v9');
+        })
+    },10000);
+
+
+    // document.querySelector('#change-map-btn').addEventListener('click', ()=>{
+    //     let address = document.querySelector()
+    // })
+
+    let foodPopup = new mapboxgl.Popup().setHTML("<h3>Mall of Asia</h3>")
+    let foodMarker = new mapboxgl.Marker({draggable: true}).setLngLat([120.982155,  14.535067]).setPopup(foodPopup).addTo(map);
+
+    marker.on('dragend', function() {
+        let newCoordinates = foodMarker.getLngLat();
+        foodPopup.setHTML(newCoordinates.lng());
+    });
+</script>
+
+</body>
+</html>
