@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Weather_Map</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <!--    //map styles-->
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css' rel='stylesheet' />
 <!--    //API Tokens-->
@@ -13,9 +14,33 @@
 <body>
 <!--//map script-->
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js'></script>
+
+<!--HTML-->
+
+<!--THIS IS THE SEARCH INPUT-->
+<div id="dynamicSearch">
+    <input id="dynamicInput" type="search" placeholder="Insert City Name Here"/>
+    <button id="dynamicButton" type="submit">Search</button>
+</div>
+<!--SEARCH INPUT ENDS-->
+
+<!--CARD ONE-->
+<div class="weather-card">
+    <div id="following-cards"></div>
+</div>
+<!--CARD ONE ENDS-->
+
+<!--This is the MAP-->
 <div class="map-parent">
 <div id="map" class="map-body"></div>
 </div>
+<!--THE MAP ENDS-->
+
+
+<!--HTML ENDS-->
+
+<!--////////////////////////////////-->
+
 <!--//Jquery-->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <!--//personal JS-->

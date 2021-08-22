@@ -1,10 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>DOM Warm Up August</title>
 </head>
 <body>
-$END$
+
+<!-- TODO: add functionality such that the number in the input will be added to the total in the h1 when the button is clicked
+      No changes to the existing HTML is needed, other than adding jQuery or JavaScript.
+-->
+<h1 id="number-output">0</h1>
+<form>
+    <input id="number-input" type="number" min="0" max="100">
+    <button id="add-btn">Add</button>
+</form>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script>
+    $('#add-btn').click(function(e){
+        e.preventDefault();
+      let outputNumber = $('#number-input').val();
+        $('#number-output').html(outputNumber);
+    });
+</script>
 </body>
 </html>
