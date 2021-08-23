@@ -19,10 +19,19 @@ const map = new mapboxgl.Map({
     zoom: 10 // starting zoom
 });
 
+/////MARKER START
+let marker = new mapboxgl.Marker()
+    .setLngLat([-98.4916, 29.4260])
+    .addTo(map);
+
+
+///// MARKER END
+
 // DYNAMIC BUTTON START
 
 $('#dynamicButton').click(function(e){
     e.preventDefault();
+    marker.remove();
     geocode($('#dynamicInput').val(), MAP_BOX_API_TOKEN).then((result)=>{
         $.ajax({
             url: "https://api.openweathermap.org/data/2.5/onecall",
@@ -53,6 +62,10 @@ $('#dynamicButton').click(function(e){
             $('#following-cards').html(cardHtml);
 
             map.setCenter([result.lon, result.lat]);
+
+            let newMarker = new mapboxgl.Marker()
+                .setLngLat([result.lon, result.lat])
+                .addTo(map);
         })
     })
 });
