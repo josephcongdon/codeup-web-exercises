@@ -50,7 +50,7 @@ $('#dynamicButton').click(function(e){
 
                 cardHtml += '<div class="card" style="width: 18rem;">' +
                     '<div class="card-header">' + dynamicDay + '</div>' + '<ul class="list-group list-group-flush">' +
-                    '<li class="list-group-item">' + result.daily[i].temp.max + '</li>' +
+                    '<li class="list-group-item">' + result.daily[i].temp.max + '    ' + '<img src="http://openweathermap.org/img/wn/' + result.daily[i].weather[0].icon + '@2x.png"/>' + '</li>' +
                     '<li class="list-group-item">' + result.daily[i].weather[0].description + '</li>' +
                     '<li class="list-group-item">' + result.daily[i].humidity + '</li>' +
                     '<li class="list-group-item">' + result.daily[i].wind_speed + '</li>' +
@@ -63,7 +63,7 @@ $('#dynamicButton').click(function(e){
 
             map.setCenter([result.lon, result.lat]);
 
-            let newMarker = new mapboxgl.Marker()
+             marker = new mapboxgl.Marker()
                 .setLngLat([result.lon, result.lat])
                 .addTo(map);
         })
@@ -71,6 +71,8 @@ $('#dynamicButton').click(function(e){
 });
 
 ///DYNAMIC BUTTON END
+
+
 
 
 
@@ -86,14 +88,15 @@ $('#dynamicButton').click(function(e){
         exclude: 'minutely,hourly',
         units: 'imperial'
     }
+
+
     }).done(function(data) {
      let cardHtml = '';
      for (let i = 0; i < 5; i++) {
          let dynamicDay = new Date(data.daily[i].dt * 1000).toDateString()
-
          cardHtml += '<div class="card" style="width: 18rem;">' +
              '<div class="card-header">' + dynamicDay + '</div>' + '<ul class="list-group list-group-flush">' +
-             '<li class="list-group-item">' + data.daily[i].temp.max + '</li>' +
+             '<li class="list-group-item">' + data.daily[i].temp.max + '    ' + '<img src="http://openweathermap.org/img/wn/' + data.daily[i].weather[0].icon + '@2x.png"/>' + '</li>' +
              '<li class="list-group-item">' + data.daily[i].weather[0].description + '</li>' +
              '<li class="list-group-item">' + data.daily[i].humidity + '</li>' +
              '<li class="list-group-item">' + data.daily[i].wind_speed + '</li>' +
