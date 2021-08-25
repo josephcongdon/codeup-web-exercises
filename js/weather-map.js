@@ -20,9 +20,10 @@ const map = new mapboxgl.Map({
 });
 
 /////MARKER START
-let marker = new mapboxgl.Marker()
+let marker = new mapboxgl.Marker({draggable: true})
     .setLngLat([-98.4916, 29.4260])
     .addTo(map);
+
 
 
 ///// MARKER END
@@ -63,7 +64,7 @@ $('#dynamicButton').click(function(e){
 
             map.setCenter([result.lon, result.lat]);
 
-             marker = new mapboxgl.Marker()
+             marker = new mapboxgl.Marker({draggable: true})
                 .setLngLat([result.lon, result.lat])
                 .addTo(map);
         })
@@ -106,6 +107,14 @@ $('#dynamicButton').click(function(e){
 
      }
      $('#following-cards').html(cardHtml);
+
+     marker.on('dragend', function() {
+         let newCoordinates = marker.getLngLat();
+         console.log(newCoordinates)
+     });
+
+
+
  }).fail(function(error) {
      console.log(error);
  });
