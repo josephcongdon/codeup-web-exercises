@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Front-end Warmup</title>
+</head>
+<body>
+
+<button id="hide-btn">Hide Paragraph</button>
+<p id="paragraph">This paragraph will disappear when the button is clicked.</p>
+
+
+
+<script>
+    let hideBtn = document.getElementById("hide-btn")
+    hideBtn.addEventListener('click', function (){
+        console.log(hideBtn)
+        let paragraph = document.getElementById("paragraph");
+        if(!paragraph.hidden) return paragraph.innerHTML= '';
+    })
+</script>
+
+</body>
+</html>
